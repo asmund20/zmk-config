@@ -4,7 +4,8 @@
 
 / {
     keymap {
-        &kp A &kp B &kp C
-
+        bindings = <
+            &kp A &kp B &kp C
+        >;
     };
 };
