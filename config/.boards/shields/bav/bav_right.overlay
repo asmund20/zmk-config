@@ -1,0 +1,28 @@
+/*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+#include "bav.dtsi";
+
+&default_transform {
+    column-offset = <7>;
+}
+&kscan1 {
+    col-gpios
+        = <&promicro 0 GPIO_ACTIVE_HIGH>
+        , <&promicro 2 GPIO_ACTIVE_HIGH>
+        , <&promicro 4 GPIO_ACTIVE_HIGH>
+        , <&promicro 5 GPIO_ACTIVE_HIGH>
+        , <&promicro 6 GPIO_ACTIVE_HIGH>
+        , <&promicro 7 GPIO_ACTIVE_HIGH>
+        ;
+}
+
+&kscan2 {
+    input-gpios
+        = <&promicro 14 GPIO_ACTIVE_HIGH>
+        , <&promicro 16 GPIO_ACTIVE_HIGH>
+        , <&promicro 15 GPIO_ACTIVE_HIGH>
+        ;
+}
