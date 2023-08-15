@@ -32,9 +32,9 @@
         compatible = "zmk,kscan-gpio-matrix";
         
         row-gpios
-            = <&promicro 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&promicro 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&promicro 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            = <&pro_micro 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&pro_micro 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&pro_micro 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             ;
     };
 
