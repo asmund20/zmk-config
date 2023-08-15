@@ -14,7 +14,7 @@
         , <&promicro 2 GPIO_ACTIVE_HIGH>
         , <&promicro 0 GPIO_ACTIVE_HIGH>
         ;
-}
+};
 
 &kscan2 {
     input-gpios
@@ -22,4 +22,4 @@
         , <&promicro 16 GPIO_ACTIVE_HIGH>
         , <&promicro 14 GPIO_ACTIVE_HIGH>
         ;
-}
+};

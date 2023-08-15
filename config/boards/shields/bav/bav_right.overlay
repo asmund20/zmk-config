@@ -7,7 +7,7 @@
 
 &default_transform {
     column-offset = <7>;
-}
+};
 &kscan1 {
     col-gpios
         = <&promicro 0 GPIO_ACTIVE_HIGH>
@@ -17,7 +17,7 @@
         , <&promicro 6 GPIO_ACTIVE_HIGH>
         , <&promicro 7 GPIO_ACTIVE_HIGH>
         ;
-}
+};
 
 &kscan2 {
     input-gpios
@@ -25,4 +25,4 @@
         , <&promicro 16 GPIO_ACTIVE_HIGH>
         , <&promicro 15 GPIO_ACTIVE_HIGH>
         ;
-}
+};
