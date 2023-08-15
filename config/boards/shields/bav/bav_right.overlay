@@ -3,7 +3,7 @@
  *
  * SPDX-License-Identifier: MIT
  */
-#include "bav.dtsi";
+#include "bav.dtsi"
 
 &default_transform {
     column-offset = <7>;

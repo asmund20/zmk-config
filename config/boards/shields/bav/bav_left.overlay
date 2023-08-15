@@ -3,7 +3,7 @@
  *
  * SPDX-License-Identifier: MIT
  */
-#include "bav.dtsi";
+#include "bav.dtsi"
 
 &kscan1 {
     col-gpios
