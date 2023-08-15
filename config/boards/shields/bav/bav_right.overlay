@@ -6,7 +6,7 @@
 #include "bav.dtsi"
 
 &default_transform {
-    column-offset = <7>;
+    col-offset = <7>;
 };
 &kscan1 {
     col-gpios
