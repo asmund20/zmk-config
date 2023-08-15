@@ -4,7 +4,7 @@ manifest:
       url-base: https://github.com/asmund20
   projects:
     - name: zmk
-      remote: asmund20
+      remote: zmkfirmware
       revision: main
       import: app/west.yml
   self:
