@@ -10,6 +10,18 @@
 #define DEFAULT 0
 
 / {
+    behaviors {
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -20,9 +32,9 @@
 //           |    Z    |     X      |     C     |     V    |    B    |                 |    N    |    M    |    ,    |    .    |    -       |         
 //                                              |   CAPS   |  SPACE  |  WIN  | MISSING |  layer  |   layer |
             bindings = <
-&kp ESC   &kp Q     &kp W           &kp E           &kp R           &kp T                        &kp Y     &kp U          &kp I           &kp O           &kp P     &kp BSPC
-&kp TAB   &kp A     &ht_tp LSHFT S  &ht_tp LCTRL D  &ht_tp LALT F   &kp G                        &kp H     &ht_tp RALT J  &ht_tp RCTRL K  &ht_tp RSHFT L  &none     &kp ENTER
-          &kp Z     &kp X           &kp C           &kp V           &kp B                        &kp N     &kp M          &kp COMMA       &kp PERIOD      &kp MINUS
+&kp ESC   &kp Q     &kp W           &kp E           &kp R           &kp T                        &kp Y     &kp U       &kp I        &kp O        &kp P     &kp BSPC
+&kp TAB   &kp A     &hm LSHFT S     &hm LCTRL D     &hm LALT F      &kp G                        &kp H     &hm RALT J  &hm RCTRL K  &hm RSHFT L  &none     &kp ENTER
+          &kp Z     &kp X           &kp C           &kp V           &kp B                        &kp N     &kp M       &kp COMMA    &kp PERIOD   &kp MINUS
                                                     &kp CAPS        &kp SPACE   &kp LGUI   &none    &none     &none
             >;
 
