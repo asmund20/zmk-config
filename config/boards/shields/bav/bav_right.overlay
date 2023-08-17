@@ -5,10 +5,9 @@
  */
 #include "bav.dtsi"
 
-&default_transform {
-    col-offset = <8>;
-};
+
 &kscan1 {
+    col-offset = <6>;
     col-gpios
         = <&pro_micro 0 GPIO_ACTIVE_HIGH>
         , <&pro_micro 2 GPIO_ACTIVE_HIGH>
