@@ -41,14 +41,14 @@
 &kp ESC   &kp Q     &kp W           &kp E           &kp R           &kp T                           &kp Y       &kp U  &kp I        &kp O        &kp P     &kp BSPC
 &kp TAB   &kp A     &hm LSHFT S     &hm LCTRL D     &hm LALT F      &kp G                           &kp H       &kp J  &hm RCTRL K  &hm RSHFT L  &kp RBKT  &kp ENTER
           &kp Z     &kp X           &kp C           &kp V           &kp B                           &kp N       &kp M  &kp COMMA    &kp PERIOD   &kp SLASH
-                                                    &kp CAPS        &kp SPACE   &kp LGUI   &none    &tog NUM    &kp RAlt
+                                                    &kp CAPS        &kp SPACE   &kp LGUI   &none    &tog NUM    &kp RALT
             >;
         };
 
         num_layer {
 // --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // |   ESC   |    Q    |     W      |     E     |     R    |    Å    |                 |  |(bar) |    7    |    8    |    9    |    \    |BACKSPACE|
-// |   TAB   |    A    |  LShift/S  |  LCtrl/D  |  LAlt/F  |    Ø    |                 |    *    |    4    |    5    |    6    |    +    |  ENTER  |
+// |   TAB   |    A    |  LShift/S  |  LCtrl/D  |  LAlt/F  |    Ø    |                 |    '    |    4    |    5    |    6    |    +    |  ENTER  |
 //           |    Z    |     X      |     C     |     V    |    Æ    |                 |    0    |    1    |    2    |    3    |    -    |         
 //                                  |   CAPS/hold layer    |  SPACE/ |  WIN  | MISSING | tog num |   RAlt  |
             bindings = <
