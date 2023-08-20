@@ -83,9 +83,9 @@
 //          |  NONE  |  NONE  |  NONE  |  NONE  |  NONE  |                 |  NONE  |  NONE  |  NONE  |  NONE  |  NONE  |
 //                                     |  NONE  |  NONE  |  NONE  |  NONE  |  NONE  |  NONE  |
             bindings = <
-&none  &none  &kp PIPE2  &kp PIPE  &kp GT  &kp LT                &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none                &none  &none  &none  &none  &none  &none
-       &none  &none  &none  &none  &none                &none  &none  &none  &none  &none
+&none  &none  &kp PIPE2  &kp PIPE  &kp GT  &kp LT                &kp EXCL  &kp AT  &kp HASH  &kp DLLT  &kp PERCENT  &kp CARET
+&kp LBRC  &RBRC  &kp TILDE  &NUHS  &kp TILDE2  &none                &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR  &kp PLUS  &kp UNDER
+       &none  &none  &none  &none  &none                &kp SLASH  &kp QMARK  &kp NUBS  &kp COLON  &kp DQT
                             &none  &none  &none  &none  &none  &none
             >;
         };
