@@ -25,7 +25,7 @@
             bindings = <&kp>, <&kp>;
         };
 
-        lh: layer_hold {
+        lah: layer_hold {
             compatible = "zmk,beahvior-hold-tap";
             label = "LAYER_HOLD";
             #binding-cells = <2>;
@@ -54,7 +54,7 @@
 &kp ESC   &kp Q     &kp W           &kp E           &kp R           &kp T                           &kp Y       &kp U       &kp I        &kp O        &kp P     &kp BSPC
 &kp TAB   &kp A     &hm LSHFT S     &hm LCTRL D     &hm LALT F      &kp G                           &kp H       &hm LALT J  &hm RCTRL K  &hm RSHFT L  &kp RBKT  &kp ENTER
           &kp Z     &kp X           &kp C           &kp V           &kp B                           &kp N       &kp M       &kp COMMA    &kp PERIOD   &kp SLASH
-                                     &lt FUNCTION CAPS  &lt BLUETOOTH SPACE   &kp LGUI     &none    &lh NUM NUM &kp RALT
+                                     &lt FUNCTION CAPS  &lt BLUETOOTH SPACE   &kp LGUI     &none    &lah NUM NUM &kp RALT
             >;
         };
 
