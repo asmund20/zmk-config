@@ -24,6 +24,16 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+
+        lh: layer_hold {
+            compatible = "zmk,beahvior-hold-tap";
+            label = "LAYER_HOLD";
+            #binding-cells = <2>;
+            tapping-term-ms =<200>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&mo>, <&to>;
+        };
     };
 
     /*
@@ -40,11 +50,11 @@
 // |   TAB   |    A    |  LShift/S  |  LCtrl/D  |  LAlt/F  |    G    |               |    H    | LAlt/J | RCtrl/K | RShft/L | Diaeresis |  ENTER  |
 //           |    Z    |     X      |     C     |     V    |    B    |               |    N    |    M   |    ,    |    .    |     -     |         
 //                                 | FUNCTION/CAPS | BLUETOOTH/SPACE | WIN |   NONE  | tog num |   RAlt |
-            bindings = <
+            bindings = 
 &kp ESC   &kp Q     &kp W           &kp E           &kp R           &kp T                           &kp Y       &kp U       &kp I        &kp O        &kp P     &kp BSPC
 &kp TAB   &kp A     &hm LSHFT S     &hm LCTRL D     &hm LALT F      &kp G                           &kp H       &hm LALT J  &hm RCTRL K  &hm RSHFT L  &kp RBKT  &kp ENTER
           &kp Z     &kp X           &kp C           &kp V           &kp B                           &kp N       &kp M       &kp COMMA    &kp PERIOD   &kp SLASH
-                                     &lt FUNCTION CAPS  &lt BLUETOOTH SPACE   &kp LGUI     &none    &tog NUM    &kp RALT
+                                     &lt FUNCTION CAPS  &lt BLUETOOTH SPACE   &kp LGUI     &none    &lh NUM NUM &kp RALT
             >;
         };
 
