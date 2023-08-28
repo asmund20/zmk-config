@@ -37,14 +37,14 @@
 
         default_layer {
 // --------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// |   ESC   |    Q    |     W      |     E     |     R    |    T    |               |    Y    |    U   |    I    |    O    |     P     |BACKSPACE|
-// |   TAB   |    A    |  LShift/S  |  LCtrl/D  |  LAlt/F  |    G    |               |    H    | LAlt/J | RCtrl/K | RShft/L | Diaeresis |  ENTER  |
-//           |    Z    |     X      |     C     |     V    |    B    |               |    N    |    M   |    ,    |    .    |     -     |         
-//                                 | FUNCTION/CAPS | BLUETOOTH/SPACE | WIN |   NONE  | tog num |   RAlt |
+// |   ESC   |    Q    |     W      |     E     |     R    |    T    |               |    Y    |    U   |    I    |    O    |          P     |BACKSPACE|
+// |   TAB   | RALT/A  |  LShift/S  |  LCtrl/D  |  LAlt/F  |    G    |               |    H    | LAlt/J | RCtrl/K | RShft/L | RALT/Diaeresis |  ENTER  |
+//           |    Z    |     X      |     C     |     V    |    B    |               |    N    |    M   |    ,    |    .    |     -          |         
+//                                 | FUNCTION/CAPS | BLUETOOTH/SPACE | WIN |   NONE  | tog num |   none |
             bindings = <
-&kp ESC   &kp Q     &kp W           &kp E           &kp R           &kp T                           &kp Y       &kp U       &kp I        &kp O        &kp P     &kp BSPC
-&kp TAB   &kp A     &hm LSHFT S     &hm LCTRL D     &hm LALT F      &kp G                           &kp H       &hm LALT J  &hm RCTRL K  &hm RSHFT L  &kp RBKT  &kp ENTER
-          &kp Z     &kp X           &kp C           &kp V           &kp B                           &kp N       &kp M       &kp COMMA    &kp PERIOD   &kp SLASH
+&kp ESC   &kp Q      &kp W           &kp E           &kp R           &kp T                           &kp Y       &kp U       &kp I        &kp O        &kp P          &kp BSPC
+&kp TAB   &hm RALT A &hm LSHFT S     &hm LCTRL D     &hm LALT F      &kp G                           &kp H       &hm LALT J  &hm RCTRL K  &hm RSHFT L  &hm RALT RBKT  &kp ENTER
+          &kp Z      &kp X           &kp C           &kp V           &kp B                           &kp N       &kp M       &kp COMMA    &kp PERIOD   &kp SLASH
                                      &lt FUNCTION CAPS  &lt BLUETOOTH SPACE   &kp LGUI     &none    &mo NUM     &kp RALT
             >;
         };
@@ -52,7 +52,7 @@
         num_layer {
 // --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // |   ESC   |    Q    |     W      |     E     |     <    |    Å    |                 |  |(bar) |    7    |    8    |    9    |    \    |BACKSPACE|
-// |   TAB   |    A    |  LShift/S  |  LCtrl/D  |  LAlt/F  |    Ø    |                 |    '    |    4    |    5    |    6    |    +    |  ENTER  |
+// |   TAB   | RALT/A  |  LShift/S  |  LCtrl/D  |  LAlt/F  |    Ø    |                 |    '    |    4    |    5    |    6    |    +    |  ENTER  |
 //           |    Z    |     X      |     C     |     V    |    Æ    |                 |    0    |    1    |    2    |    3    |    -    |         
 //                                        |  FUNCTION/CAPS |  SPACE/ |  WIN  | MISSING | tog num |   RAlt  |
             bindings = <
@@ -65,12 +65,12 @@
 
         bt_layer {
 // --------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// |  NONE  |  NONE  |   NONE  |  NONE  |    LAlt    |  NONE  |                 |  NONE  |  pgup  |   up   |  pgdn  |  NONE  |  NONE  |
+// |  NONE  |  NONE  |   NONE  |  CTRL  |    LAlt    |  NONE  |                 |  NONE  |  pgup  |   up   |  pgdn  |  NONE  |  NONE  |
 // |  NONE  |  bt 0  |   bt 1  |  bt 2  |    bt 3    |  bt 4  |                 |  NONE  |  left  |  down  |  right |  NONE  |  NONE  |
 //          |  NONE  | out usb | out bt |  bt clear  |  NONE  |                 |  NONE  |  NONE  |  NONE  |  NONE  |  NONE  |
 //                                      |    NONE    |  NONE  |  NONE  |  NONE  |  NUM  |  RAlt  |
             bindings = <
-&none  &none         &none         &none         &kp LALT      &none                              &none    &kp PG_UP  &kp UP    &kp PG_DN  &none  &none
+&none  &none         &none         &kp LCTRL     &kp LALT      &none                              &none    &kp PG_UP  &kp UP    &kp PG_DN  &none  &none
 &none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                       &none    &kp LEFT   &kp DOWN  &kp RIGHT  &kp LALT  &none
        &none         &out OUT_USB  &out OUT_BLE  &bt BT_CLR    &none                              &none    &none      &none     &none      &none
                                                  &none         &none         &none         &none  &to NUM  &trans
