@@ -45,7 +45,7 @@
 &kp ESC   &kp Q      &kp W           &kp E           &kp R           &kp T                           &kp Y       &kp U       &kp I        &kp O        &kp P          &kp BSPC
 &kp TAB   &hm RALT A &hm LSHFT S     &hm LCTRL D     &hm LALT F      &kp G                           &kp H       &hm LALT J  &hm RCTRL K  &hm RSHFT L  &hm RALT RBKT  &kp ENTER
           &kp Z      &kp X           &kp C           &kp V           &kp B                           &kp N       &kp M       &kp COMMA    &kp PERIOD   &kp SLASH
-                                     &lt FUNCTION CAPS  &lt BLUETOOTH SPACE   &kp LGUI     &none    &mo NUM     &kp RALT
+                                     &lt FUNCTION CAPS  &lt BLUETOOTH SPACE   &kp LGUI     &none    &mo NUM     &none
             >;
         };
 
@@ -54,7 +54,7 @@
 // |   ESC   |    Q    |     W      |     E     |     <    |    Å    |                 |  |(bar) |    7    |    8    |    9    |    \    |BACKSPACE|
 // |   TAB   | RALT/A  |  LShift/S  |  LCtrl/D  |  LAlt/F  |    Ø    |                 |    '    |    4    |    5    |    6    |    +    |  ENTER  |
 //           |    Z    |     X      |     C     |     V    |    Æ    |                 |    0    |    1    |    2    |    3    |    -    |         
-//                                        |  FUNCTION/CAPS |  SPACE/ |  WIN  | MISSING | tog num |   RAlt  |
+//                                        |  FUNCTION/CAPS |  SPACE/ |  WIN  | MISSING | tog num |   NONE  |
             bindings = <
 &trans   &trans    &trans   &trans   &kp NUBS &kp LBKT                        &kp GRAVE  &kp N7   &kp N8   &kp N9   &kp EQUAL   &trans
 &trans   &trans    &trans   &trans   &trans   &kp SEMI                        &kp BSLH   &kp N4   &kp N5   &kp N6   &kp MINUS   &trans
