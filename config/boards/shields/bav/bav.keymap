@@ -7,6 +7,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/mouse.h>
 
 #define DEFAULT 0
 #define NUM 1
@@ -40,12 +41,12 @@
 // |   ESC   |    Q    |     W      |     E     |     R    |    T    |               |    Y    |    U   |    I    |    O    |          P     |BACKSPACE|
 // |   TAB   | RALT/A  |  LShift/S  |  LCtrl/D  |  LAlt/F  |    G    |               |    H    | LAlt/J | RCtrl/K | RShft/L | RALT/Diaeresis |  ENTER  |
 //           |    Z    |     X      |     C     |     V    |    B    |               |    N    |    M   |    ,    |    .    |     -          |         
-//                                 | FUNCTION/CAPS | BLUETOOTH/SPACE | WIN |   NONE  | tog num |   none |
+//                                 | FUNCTION/CAPS | BLUETOOTH/SPACE | WIN |   NONE  | tog num |  LGUI  |
             bindings = <
-&kp ESC   &kp Q      &kp W           &kp E           &kp R           &kp T                           &kp Y       &kp U       &kp I        &kp O        &kp P          &kp BSPC
-&kp TAB   &hm RALT A &hm LSHFT S     &hm LCTRL D     &hm LALT F      &kp G                           &kp H       &hm LALT J  &hm RCTRL K  &hm RSHFT L  &hm RALT RBKT  &kp ENTER
-          &kp Z      &kp X           &kp C           &kp V           &kp B                           &kp N       &kp M       &kp COMMA    &kp PERIOD   &kp SLASH
-                                     &lt FUNCTION CAPS  &lt BLUETOOTH SPACE   &kp LGUI     &none    &mo NUM     &none
+&kp ESC   &kp Q      &kp W           &kp E           &kp R           &kp T                          &kp Y       &kp U       &kp I        &kp O        &kp P          &kp BSPC
+&kp TAB   &hm RALT A &hm LSHFT S     &hm LCTRL D     &hm LALT F      &kp G                          &kp H       &hm LALT J  &hm RCTRL K  &hm RSHFT L  &hm RALT RBKT  &kp ENTER
+          &kp Z      &kp X           &kp C           &kp V           &kp B                          &kp N       &kp M       &kp COMMA    &kp PERIOD   &kp SLASH
+                                     &lt FUNCTION CAPS  &lt BLUETOOTH SPACE   &kp LGUI     &none    &mo NUM     &kp LGUI
             >;
         };
 
@@ -54,7 +55,7 @@
 // |   ESC   |    Q    |     W      |     E     |     <    |    Å    |                 |  |(bar) |    7    |    8    |    9    |    \    |BACKSPACE|
 // |   TAB   | RALT/A  |  LShift/S  |  LCtrl/D  |  LAlt/F  |    Ø    |                 |    '    |    4    |    5    |    6    |    +    |  ENTER  |
 //           |    Z    |     X      |     C     |     V    |    Æ    |                 |    0    |    1    |    2    |    3    |    -    |         
-//                                        |  FUNCTION/CAPS |  SPACE/ |  WIN  | MISSING | tog num |   NONE  |
+//                                        |  FUNCTION/CAPS |  SPACE/ |  WIN  | MISSING | tog num |   LGUI  |
             bindings = <
 &trans   &trans    &trans   &trans   &kp NUBS &kp LBKT                        &kp GRAVE  &kp N7   &kp N8   &kp N9   &kp EQUAL   &trans
 &trans   &trans    &trans   &trans   &trans   &kp SEMI                        &kp BSLH   &kp N4   &kp N5   &kp N6   &kp MINUS   &trans
@@ -68,12 +69,12 @@
 // |  NONE  |  NONE  |   NONE  |  CTRL  |    LAlt    |  NONE  |                 |  NONE  |  pgup  |   up   |  pgdn  |  NONE  |  NONE  |
 // |  NONE  |  bt 0  |   bt 1  |  bt 2  |    bt 3    |  bt 4  |                 |  NONE  |  left  |  down  |  right |  NONE  |  NONE  |
 //          |  NONE  | out usb | out bt |  bt clear  |  NONE  |                 |  NONE  |  NONE  |  NONE  |  NONE  |  NONE  |
-//                                      |    NONE    |  NONE  |  NONE  |  NONE  |  NUM  |  RAlt  |
+//                                      |    NONE    |  NONE  |  NONE  |  NONE  |  NUM   |  LGUI  |
             bindings = <
 &none  &none         &none         &kp LCTRL     &kp LALT      &none                              &none    &kp PG_UP  &kp UP    &kp PG_DN  &none  &none
 &none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                       &none    &kp LEFT   &kp DOWN  &kp RIGHT  &kp LALT  &none
        &none         &out OUT_USB  &out OUT_BLE  &bt BT_CLR    &none                              &none    &none      &none     &none      &none
-                                                 &none         &none         &none         &none  &to NUM  &trans
+                                                 &none         &none        &trans         &none  &to NUM  &trans
             >;
         };
 
@@ -82,12 +83,12 @@
 // |   F1   |   F2   |   F3   |   F4   |   F5   |   F6   |                 |  NONE  |  NONE  |  NONE  |  NONE  |  NONE  |  NONE  |
 // |   F7   |   F8   |   F9   |   F10  |   F11  |   F12  |                 |  NONE  |  NONE  |  NONE  |  NONE  |  NONE  |  NONE  |
 //          |  NONE  |  NONE  |  NONE  |  NONE  |  NONE  |                 |  NONE  |  NONE  |  NONE  |  NONE  |  NONE  |
-//                                     |  NONE  |  NONE  |  NONE  |  NONE  |  NONE  |  NONE  |
+//                                     |  NONE  |  NONE  |  NONE  |  NONE  |  NONE  |  LGUI  |
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6                &none  &none  &none  &none  &none  &none
-&kp F7  &kp F8  &kp F9  &kp F10 &kp F11 &kp F12               &none  &none  &none  &none  &none  &none
-        &none   &none   &none   &none   &none                 &none  &none  &none  &none  &none
-                                &none   &none  &none    &none  &none  &none
+&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6                 &none  &none  &none  &none  &none  &none
+&kp F7  &kp F8  &kp F9  &kp F10 &kp F11 &kp F12                &none  &none  &none  &none  &none  &none
+        &none   &none   &none   &none   &none                  &none  &none  &none  &none  &none
+                                &trans  &none  &none    &none  &none  &trans
             >;
         };
     };
