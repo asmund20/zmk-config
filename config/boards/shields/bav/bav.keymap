@@ -65,12 +65,12 @@
 
         bt_layer {
 // --------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// |  NONE  |  NONE  |   NONE  |  CTRL  |    LAlt    |  NONE  |                 |  NONE  |  pgup  |   up   |  pgdn  |  NONE  |  NONE  |
+// |  NONE  |  NONE  |  LSHIFT |  CTRL  |    LAlt    |  NONE  |                 |  NONE  |  pgup  |   up   |  pgdn  |  NONE  |  NONE  |
 // |  NONE  |  bt 0  |   bt 1  |  bt 2  |    bt 3    |  bt 4  |                 |  NONE  |  left  |  down  |  right |  NONE  |  NONE  |
 //          |  NONE  | out usb | out bt |  bt clear  |  NONE  |                 |  NONE  |  NONE  |  NONE  |  NONE  |  NONE  |
 //                                      |    NONE    |  NONE  |  NONE  |  NONE  |  NUM   |  LGUI  |
             bindings = <
-&none  &none         &none         &kp LCTRL     &kp LALT      &none                              &none    &kp PG_UP  &kp UP    &kp PG_DN  &none  &none
+&none  &none         &kp LSHIFT         &kp LCTRL     &kp LALT      &none                              &none    &kp PG_UP  &kp UP    &kp PG_DN  &none  &none
 &none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                       &none    &kp LEFT   &kp DOWN  &kp RIGHT  &kp LALT  &none
        &none         &out OUT_USB  &out OUT_BLE  &bt BT_CLR    &none                              &none    &none      &none     &none      &none
                                                  &none         &none        &trans         &none  &to NUM  &trans
