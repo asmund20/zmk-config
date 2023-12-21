@@ -12,7 +12,6 @@
 #define NUM 1
 #define BLUETOOTH 2
 #define FUNCTION 3
-#define GAMING 4
 
 / {
     behaviors {
@@ -52,15 +51,15 @@
 
         num_layer {
 // --------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// |   ESC   |    Q    |     W      |     E     |     <    |    Å    |                   |  |(bar) |    7    |    8    |    9    |    \    |BACKSPACE|
-// |   TAB   | RALT/A  |  LShift/S  |  LCtrl/D  |  LAlt/F  |    Ø    |                   |    '    |    4    |    5    |    6    |    +    |  ENTER  |
-//           |    Z    |     X      |     C     |     V    |    Æ    |                   |    0    |    1    |    2    |    3    |    -    |         
+// |   ESC   |    Q    |     W      |     $     |     <    |    Å    |                   |  |(bar) |    7    |    8    |    9    |    \    |BACKSPACE|
+// |   TAB   | RALT/A  |  LShift/{  |  LCtrl/[  |  LAlt/(  |    Ø    |                   |    '    |    4    |    5    |    6    |    +    |  ENTER  |
+//           |    Z    |     }      |     ]     |     )    |    Æ    |                   |    0    |    1    |    2    |    3    |    -    |         
 //                                         | FUNCTION/CAPS |  SPACE/ |  DEL  | BACKSPACE | tog num |   LGUI  |
             bindings = <
-&trans   &trans    &trans   &trans   &kp NUBS &kp LBKT                      &kp GRAVE  &kp N7   &kp N8   &kp N9   &kp EQUAL   &trans
-&trans   &trans    &trans   &trans   &trans   &kp SEMI                      &kp BSLH   &kp N4   &kp N5   &kp N6   &kp MINUS   &trans
-         &trans    &trans   &trans   &trans   &kp SQT                       &kp N0     &kp N1   &kp N2   &kp N3   &trans
-                                     &trans   &trans   &trans      &trans   &trans     &trans
+&trans   &trans    &trans        &kp RALT(N4)     &kp NUBS          &kp LBKT                             &kp GRAVE  &kp N7   &kp N8   &kp N9   &kp EQUAL   &trans
+&trans   &trans    &hm LS RA(N7) &hm LCTRL RA(N8) &hm LALT LS(N8)   &kp SEMI                             &kp BSLH   &kp N4   &kp N5   &kp N6   &kp MINUS   &trans
+         &trans    &kp RA(N0)    &kp RA(N9)       &kp LS(N9)        &kp SQT                              &kp N0     &kp N1   &kp N2   &kp N3   &trans
+                                                  &trans            &trans       &trans       &trans     &trans   &trans
             >;
         };
 
@@ -88,23 +87,8 @@
 &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6                 &none  &none  &none  &none  &none  &none
 &kp F7  &kp F8  &kp F9  &kp F10 &kp F11 &kp F12                &none  &none  &none  &none  &none  &none
         &none   &none   &none   &none   &none                  &none  &none  &none  &none  &none
-                                &trans  &none  &none    &none  &to GAMING  &trans
+                                &trans  &none  &none    &none  &none  &trans
             >;
-        };
-
-        gm_layer {
-// --------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// |    Y   |    Q   |    W   |    E   |    R   |    T   |                 |  NONE  |  NONE  |  NONE  |  NONE  |  NONE  |  NONE  |
-// |    H   |    A   |    S   |    D   |    F   |    G   |                 |  NONE  |  NONE  |  NONE  |  NONE  |  NONE  |  NONE  |
-//          |    Z   |    X   |    C   |    V   |    B   |                 |  NONE  |  NONE  |  NONE  |  NONE  |  NONE  |
-//                                     |    M   |    J   |    I   |  NONE  |  NONE  |  default_layer  |
-            bindings = <
-&kp Y  &kp Q  &kp W  &kp E  &kp R  &kp T                 &none  &none  &none  &none  &none  &none
-&kp H  &kp A  &kp S  &kp D  &kp F  &kp G                 &none  &none  &none  &none  &none  &none
-       &kp Z  &kp X  &kp C  &kp V  &kp B                 &none  &none  &none  &none  &none
-                            &kp M  &kp J  &kp I   &none  &none  &to DEFAULT
-            >;
-
         };
     };
 };
