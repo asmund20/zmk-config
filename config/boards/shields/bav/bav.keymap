@@ -40,12 +40,12 @@
 // |   ESC   |    Q    |     W      |     E     |     R    |    T    |                 |    Y    |    U   |    I    |    O    |          P     |BACKSPACE|
 // |   TAB   | RALT/A  |  LShift/S  |  LCtrl/D  |  LAlt/F  |    G    |                 |    H    | LAlt/J | RCtrl/K | RShft/L | RALT/Diaeresis |  ENTER  |
 //           |    Z    |     X      |     C     |     V    |    B    |                 |    N    |    M   |    ,    |    .    |     -          |         
-//                                 | FUNCTION/CAPS | BLUETOOTH/SPACE | DEL | BACKSPACE | tog num |  LGUI  |
+//                                         | FUNCTION/CAPS |   TEST  | DEL |  BT/space | tog num |  LGUI  |
             bindings = <
-&kp ESC   &kp Q      &kp W           &kp E           &kp R           &kp T                           &kp Y       &kp U       &kp I        &kp O        &kp P          &kp BSPC
-&kp TAB   &hm RALT A &hm LSHFT S     &hm LCTRL D     &hm LALT F      &kp G                           &kp H       &hm LALT J  &hm RCTRL K  &hm RSHFT L  &hm RALT RBKT  &kp ENTER
-          &kp Z      &kp X           &kp C           &kp V           &kp B                           &kp N       &kp M       &kp COMMA    &kp PERIOD   &kp SLASH
-                                     &lt FUNCTION CAPS  &kp A   &kp DEL     &kp BSPC   &mo NUM     &kp LGUI
+&kp ESC   &kp Q      &kp W           &kp E           &kp R           &kp T                                  &kp Y       &kp U       &kp I        &kp O        &kp P          &kp BSPC
+&kp TAB   &hm RALT A &hm LSHFT S     &hm LCTRL D     &hm LALT F      &kp G                                  &kp H       &hm LALT J  &hm RCTRL K  &hm RSHFT L  &hm RALT RBKT  &kp ENTER
+          &kp Z      &kp X           &kp C           &kp V           &kp B                                  &kp N       &kp M       &kp COMMA    &kp PERIOD   &kp SLASH
+                                                  &lt FUNCTION CAPS  &kp T   &kp DEL  &lt BLUETOOTH SPACE   &mo NUM     &kp LGUI
             >;
         };
 
@@ -54,7 +54,7 @@
 // |   ESC   |    Q    |     W      |     $     |     <    |    Å    |                   |  |(bar) |    7    |    8    |    9    |    \    |BACKSPACE|
 // |   TAB   | RALT/A  |  LShift/{  |  LCtrl/[  |  LAlt/(  |    Ø    |                   |    '    |    4    |    5    |    6    |    +    |  ENTER  |
 //           |    Z    |     }      |     ]     |     )    |    Æ    |                   |    0    |    1    |    2    |    3    |    -    |         
-//                                         | FUNCTION/CAPS |  SPACE/ |  DEL  | BACKSPACE | tog num |   LGUI  |
+//                                         | FUNCTION/CAPS |   NONE  |  DEL  |   SPACE   | tog num |   LGUI  |
             bindings = <
 &trans   &trans    &kp RA(N2)        &kp RA(N4)       &kp NUBS          &kp LBKT                             &kp GRAVE  &kp N7   &kp N8   &kp N9   &kp EQUAL   &trans
 &trans   &trans    &hm LSHIFT RA(N7) &hm LCTRL RA(N8) &hm LALT LS(N8)   &kp SEMI                             &kp BSLH   &kp N4   &kp N5   &kp N6   &kp MINUS   &trans
