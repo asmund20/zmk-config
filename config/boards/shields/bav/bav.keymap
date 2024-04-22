@@ -71,7 +71,7 @@
 //                                      |    NONE    |  NONE  |  NONE  |  NONE  |  NUM   |  LGUI  |
             bindings = <
 &none  &none         &kp LSHIFT    &kp LCTRL     &kp LALT      &none                               &none    &kp PG_UP  &kp UP    &kp PG_DN  &none  &none
-&none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                        &none    &kp LEFT   &kp DOWN  &kp RIGHT  &kp LALT  &kp enter
+&none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                        &none    &kp LEFT   &kp DOWN  &kp RIGHT  &kp LALT  &kp ENTER
        &none         &out OUT_USB  &out OUT_BLE  &bt BT_CLR    &none                               &none    &none      &none     &none      &none
                                                  &none         &none        &trans         &trans  &to NUM  &trans
             >;
