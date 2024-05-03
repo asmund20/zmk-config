@@ -51,15 +51,15 @@
 
         num_layer {
 // --------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// |   ESC   |    Q    |     W      |     $     |     <    |    Å    |                   |  |(bar) |    7    |    8    |    9    |    \    |BACKSPACE|
-// |   TAB   | RALT/A  |  LShift/{  |  LCtrl/[  |  LAlt/(  |    Ø    |                   |    '    |    4    |    5    |    6    |    +    |  ENTER  |
-//           |    Z    |     }      |     ]     |     )    |    Æ    |                   |    0    |    1    |    2    |    3    |    -    |         
-//                                         | FUNCTION/CAPS |   NONE  |  DEL  |   SPACE   | tog num |   LGUI  |
+// |  RALT   |    /    |     @      |     {     |     }    |    Å    |                   |  |(bar) |    7    |    8    |    9    |    \    |BACKSPACE|
+// |  LSHIFT |    =    |     <      |     (     |     )    |    Ø    |                   |    '    |    4    |    5    |    6    |    +    |  ENTER  |
+//           |    "    |     $      |     [     |     ]    |    Æ    |                   |    0    |    1    |    2    |    3    |    -    |         
+//                                         | FUNCTION/CAPS |  SPACE  |  DEL  |  tog num  |         |   LGUI  |
             bindings = <
-&trans   &trans    &kp RA(N2)        &kp RA(N4)       &kp NUBS          &kp LBKT                             &kp GRAVE  &kp N7   &kp N8   &kp N9   &kp EQUAL   &trans
-&trans   &trans    &hm LSHIFT RA(N7) &hm LCTRL RA(N8) &hm LALT LS(N8)   &kp SEMI                             &kp BSLH   &kp N4   &kp N5   &kp N6   &kp MINUS   &kp ENTER
-         &trans    &kp RA(N0)        &kp RA(N9)       &kp LS(N9)        &kp SQT                              &kp N0     &kp N1   &kp N2   &kp N3   &trans
-                                                      &trans            &trans       &trans       &trans     &trans   &trans
+&kp RALT   &kp LS(N7)  &kp RA(N2)  &kp RA(N7)  &kp RA(N0)  &kp LBKT                             &kp GRAVE  &kp N7   &kp N8   &kp N9   &kp EQUAL   &trans
+&kp LSHFT  &kp LS(N0)  &kp NUBS    &kp LS(N8)  &kp LS(N9)  &kp SEMI                             &kp BSLH   &kp N4   &kp N5   &kp N6   &kp MINUS   &kp ENTER
+           &kp LS(N2)  &kp RA(N4)  &kp RA(N8)  &kp RA(N9)  &kp SQT                              &kp N0     &kp N1   &kp N2   &kp N3   &trans
+                                               &trans      &trans       &trans       &trans     &trans     &trans
             >;
         };
 
