@@ -42,10 +42,10 @@
 //           |    Z    |     X      |     C     |     V    |     B    |              |    N    |    M   |    ,    |    .    |     -          |         
 //                                | FUNCTION/CAPS |  bluetooth/space  | delete | NUM |  TEST   |  LGUI  |
             bindings = <
-&kp ESC   &kp Q      &kp W           &kp E           &kp R             &kp T                                       &kp Y       &kp U       &kp I        &kp O        &kp P          &kp BSPC
-&kp TAB   &hm RALT A &hm LSHFT S     &hm LCTRL D     &hm LALT F        &kp G                                       &kp H       &hm LALT J  &hm RCTRL K  &hm RSHFT L  &hm RALT RBKT  &kp ENTER
-          &kp Z      &kp X           &kp C           &kp V             &kp B                                       &kp N       &kp M       &kp COMMA    &kp PERIOD   &kp SLASH
-                                                    &lt FUNCTION CAPS  &lt BLUETOOTH SPACE  &kp DELETE   &mo NUM   &kp T     &kp LGUI
+&kp ESC   &kp Q      &kp W           &kp E           &kp R              &kp T                                       &kp Y     &kp U       &kp I        &kp O        &kp P          &kp BSPC
+&kp TAB   &hm RALT A &hm LSHFT S     &hm LCTRL D     &hm LALT F         &kp G                                       &kp H     &hm LALT J  &hm RCTRL K  &hm RSHFT L  &hm RALT RBKT  &kp ENTER
+          &kp Z      &kp X           &kp C           &kp V              &kp B                                       &kp N     &kp M       &kp COMMA    &kp PERIOD   &kp SLASH
+                                                    &lt BLUETOOTH CAPS  &lt FUNCTION SPACE  &kp DELETE   &mo NUM    &kp T     &kp LGUI
             >;
         };
 
@@ -65,29 +65,29 @@
 
         bt_layer {
 // --------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// |  NONE  |  NONE  |  LSHIFT |  CTRL  |    LAlt    |  NONE  |                 |  NONE  |  pgup  |   up   |  pgdn  |  NONE  |  NONE  |
-// |  NONE  |  bt 0  |   bt 1  |  bt 2  |    bt 3    |  bt 4  |                 |  NONE  |  left  |  down  |  right |  NONE  |  ENTER |
+// |  NONE  |  NONE  |  LSHIFT |  CTRL  |    LAlt    |  NONE  |                 |  NONE  |  NONE  |  NONE  |  NONE  |  NONE  |  NONE  |
+// |  NONE  |  bt 0  |   bt 1  |  bt 2  |    bt 3    |  bt 4  |                 |  NONE  |  NONE  |  NONE  |  NONE  |  NONE  |  NONE  |
 //          |  NONE  | out usb | out bt |  bt clear  |  NONE  |                 |  NONE  |  NONE  |  NONE  |  NONE  |  NONE  |
-//                                      |    NONE    |  NONE  |  NONE  |  NONE  |  NUM   |  LGUI  |
+//                                      |    NONE    |  NONE  |  NONE  |  NONE  |  NONE  |  NONE  |
             bindings = <
-&none  &none         &kp LSHIFT    &kp LCTRL     &kp LALT      &none                               &none    &kp PG_UP  &kp UP    &kp PG_DN  &none  &none
-&none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                        &none    &kp LEFT   &kp DOWN  &kp RIGHT  &kp LALT  &kp ENTER
-       &none         &out OUT_USB  &out OUT_BLE  &bt BT_CLR    &none                               &none    &none      &none     &none      &none
-                                                 &none         &none        &trans         &trans  &to NUM  &trans
+&none  &none         &none         &none         &none         &none                           &none    &none  &none    &none    &none  &none
+&none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &none    &none  &none    &none    &none  &none
+       &none         &out OUT_USB  &out OUT_BLE  &bt BT_CLR    &none                           &none    &none  &none    &none    &none
+                                                 &none         &none        &trans     &none   &none    &none
             >;
         };
 
         fn_layer {
 // --------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// |   F1   |   F2   |   F3   |   F4   |   F5   |   F6   |                 |  NONE  |  NONE  |  NONE  |  NONE  |  NONE  |  NONE  |
-// |   F7   |   F8   |   F9   |   F10  |   F11  |   F12  |                 |  NONE  |  NONE  |  NONE  |  NONE  |  NONE  |  NONE  |
-//          |  NONE  |  NONE  |  NONE  |  NONE  |  NONE  |                 |  NONE  |  NONE  |  NONE  |  NONE  |  NONE  |
+// |   F1   |   F2   |   F3   |   F4   |   F5   |   F6   |                 |  NONE  |  pgup  |   up   |  pgdn  |  NONE  |  NONE  |
+// |   F7   |   F8   |   F9   |   F10  |   F11  |   F12  |                 |  NONE  |  left  |  down  |  right |  NONE  |  ENTER |
+//          |  LALT  |  LSHIFT|  CTRL  |  LALT  |  NONE  |                 |  NONE  |  NONE  |  NONE  |  NONE  |  NONE  |
 //                                     |  NONE  |  NONE  |  NONE  |  NONE  |  NONE  |  LGUI  |
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6                 &none  &none  &none  &none  &none  &none
-&kp F7  &kp F8  &kp F9  &kp F10 &kp F11 &kp F12                &none  &none  &none  &none  &none  &none
-        &none   &none   &none   &none   &none                  &none  &none  &none  &none  &none
-                                &trans  &none  &none    &none  &none  &trans
+&kp F1  &kp F2    &kp F3     &kp F4     &kp F5    &kp F6                  &none   &kp PG_UP  &kp UP    &kp PG_DN  &none  &none
+&kp F7  &kp F8    &kp F9     &kp F10    &kp F11   &kp F12                 &none   &kp LEFT   &kp DOWN  &kp RIGHT  &kp LALT  &kp ENTER
+        &kp LALT  &kp LSHFT  &kp LCTRL  &kp LALT  &none                   &none   &none      &none     &none      &none
+                                        &trans    &none  &none    &none   &none   &trans
             >;
         };
     };
