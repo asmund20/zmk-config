@@ -27,13 +27,13 @@
 
         la: layer_tap_hold {
             compatible = "zmk,behavior-hold-tap";
-            label = "LAYER_TAP_HOLD"
+            label = "HOMEROW_MODS";
             #binding-cells = <2>;
             tapping-term-ms = <150>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
-            bindings = <&sl>, <&mo>;
-            };
+            bindings = <&mo>, <&sl>;
+        };
 
     };
 
