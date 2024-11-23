@@ -45,8 +45,7 @@
 &kp ESC   &kp Q      &kp W           &kp E           &kp R              &kp T                                       &kp Y     &kp U       &kp I        &kp O        &kp P          &kp BSPC
 &kp TAB   &hm RALT A &hm LSHFT S     &hm LCTRL D     &hm LALT F         &kp G                                       &kp H     &hm LALT J  &hm RCTRL K  &hm RSHFT L  &hm RALT RBKT  &kp ENTER
           &kp Z      &kp X           &kp C           &kp V              &kp B                                       &kp N     &kp M       &kp COMMA    &kp PERIOD   &kp SLASH
-                                                    /*&lt BLUETOOTH CAPS  &lt FUNCTION SPACE  &kp DELETE   &tog NUM   &mo NUM    &kp LGUI*/
-                                                    &lt BLUETOOTH CAPS  &lt FUNCTION SPACE  &kp DELETE   &tog NUM   &kp T    &kp LGUI
+                                                    &lt BLUETOOTH CAPS  &lt FUNCTION SPACE  &kp DELETE   &mo NUM   &kp T    &kp LGUI
             >;
         };
 
