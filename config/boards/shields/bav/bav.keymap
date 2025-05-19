@@ -12,6 +12,7 @@
 #define NUM 1
 #define BLUETOOTH 2
 #define FUNCTION 3
+#define GAMING 4
 
 / {
     behaviors {
@@ -79,15 +80,29 @@
 
         fn_layer {
 // --------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// |   F1   |   F2   |   F3   |   F4   |   F5   |   F6   |                 |   INS  |  pgup  |   up   |  pgdn  |  NONE  |  NONE  |
-// |   F7   |   F8   |   F9   |   F10  |   F11  |   F12  |                 |  HOME  |  left  |  down  |  right |  lalt  |  ENTER |
-//          |  LALT  |  LSHIFT|  CTRL  |  LALT  |  NONE  |                 |   END  |  NONE  |  NONE  |  NONE  |  NONE  |
-//                                     |  NONE  |  NONE  |  NONE  |  NONE  |  NONE  |  LGUI  |
+// |   F1   |   F2   |   F3   |   F4   |   F5   |   F6   |                      |   INS  |  pgup  |   up   |  pgdn  |  NONE  |  NONE  |
+// |   F7   |   F8   |   F9   |   F10  |   F11  |   F12  |                      |  HOME  |  left  |  down  |  right |  lalt  |  ENTER |
+//          |  LALT  |  LSHIFT|  CTRL  |  LALT  |  NONE  |                      |   END  |  NONE  |  NONE  |  NONE  |  NONE  |
+//                                     |  NONE  |  NONE  |  NONE  |  to GAMING  |  NONE  |  LGUI  |
             bindings = <
-&kp F1  &kp F2    &kp F3     &kp F4     &kp F5    &kp F6                   &kp INS   &kp PG_UP  &kp UP    &kp PG_DN  &none  &none
-&kp F7  &kp F8    &kp F9     &kp F10    &kp F11   &kp F12                  &kp HOME  &kp LEFT   &kp DOWN  &kp RIGHT  &kp LALT  &kp ENTER
-        &kp LALT  &kp LSHFT  &kp LCTRL  &kp LALT  &none                    &kp END   &none      &none     &none      &none
-                                        &trans    &none  &none    &none    &none     &trans
+&kp F1  &kp F2    &kp F3     &kp F4     &kp F5    &kp F6                        &kp INS   &kp PG_UP  &kp UP    &kp PG_DN  &none  &none
+&kp F7  &kp F8    &kp F9     &kp F10    &kp F11   &kp F12                       &kp HOME  &kp LEFT   &kp DOWN  &kp RIGHT  &kp LALT  &kp ENTER
+        &kp LALT  &kp LSHFT  &kp LCTRL  &kp LALT  &none                         &kp END   &none      &none     &none      &none
+                                        &trans    &none  &none    &to GAMING    &none     &trans
+            >;
+        };
+
+        gaming_layer {
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// |   ESC   |    Q    |     W      |     E     |     R    |     T    |              
+// |   TAB   | RALT/A  |  LShift/S  |  LCtrl/D  |  LAlt/F  |     G    |              
+//           |    Z    |     X      |     C     |     V    |     B    |              
+//                                | FUNCTION/CAPS |  bluetooth/space  | delete |  to default  
+            bindings = <
+&kp ESC   &kp Q      &kp W    &kp E   &kp R    &kp T                                   &none     &none       &none        &none        &none  &none
+&kp TAB   &kp A      &kp S    &kp D   &kp F    &kp G                                   &none     &none       &none        &none        &none  &none
+          &kp Z      &kp X    &kp C   &kp V    &kp B                                   &none     &none       &none        &none        &none
+                                      &none    &kp SPACE  &kp DELETE     &to DEFAULT   &kp T    &to DEFAULT
             >;
         };
     };
