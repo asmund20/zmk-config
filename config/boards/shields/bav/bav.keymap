@@ -15,8 +15,8 @@
 #define GAMING 4
 
 &kscan0 {
-    debounce-press-ms = 5;
-    debounce-release-ms = 15;
+    debounce-press-ms = <5>;
+    debounce-release-ms = <15>;
 };
 
 / {
