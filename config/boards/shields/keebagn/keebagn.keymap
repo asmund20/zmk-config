@@ -14,7 +14,7 @@
 #define FUNCTION 3
 #define GAMING 4
 
-&kscan1 {
+&kscan0 {
     debounce-press-ms = <4>;
     debounce-release-ms = <4>;
 };
