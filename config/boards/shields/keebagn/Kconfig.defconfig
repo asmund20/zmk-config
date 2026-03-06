@@ -1,5 +1,6 @@
 # Copyright (c) 2020 The ZMK Contributors
 # SPDX-License-Identifier: MIT
+
 if SHIELD_KEEBAGN_LEFT
 
 config ZMK_KEYBOARD_NAME
@@ -10,7 +11,7 @@ config ZMK_SPLIT_ROLE_CENTRAL
 
 endif
 
-if SHIELD_BAV_LEFT || SHIELD_BAV_RIGHT
+if SHIELD_KEEBAGN_LEFT || SHIELD_KEEBAGN_RIGHT
 
 config ZMK_SPLIT
     default y
