@@ -25,5 +25,5 @@ include:
     shield: keebagn_right
   - board: nice_nano//zmk
     shield: keebagn_left
-  # - board: nice_nano_v2
-  #   shield: settings_reset
+  - board: nice_nano//zmk
+    shield: settings_reset
