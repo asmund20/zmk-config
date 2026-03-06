@@ -21,9 +21,9 @@ include:
     # shield: keebagn_right
   # - board: nrfmicro/nrf52840/zmk
     # shield: keebagn_left
-  - board: nrfmicro@1.1/nrf52840/zmk
+  - board: nice_nano//zmk
     shield: keebagn_right
-  - board: nrfmicro@1.1/nrf52840/zmk
+  - board: nice_nano//zmk
     shield: keebagn_left
   # - board: nice_nano//zmk
     # shield: keebagn_right
