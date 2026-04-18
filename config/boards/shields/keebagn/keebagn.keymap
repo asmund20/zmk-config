@@ -43,7 +43,7 @@
             &kp TAB     &kp A &kp S &kp D &kp F &kp G        &kp H &kp J &kp K     &kp L      &kp ;      &kp ENTER
             &lt FN CAPS &kp Z &kp X &kp C &kp V &kp B        &kp N &kp M &kp COMMA &kp PERIOD &kp SLASH  &kp LGUI
             &lt BLUETOOTH DELETE &kp SPACE &kp RALT          &kp T &kp T &kp T
-        }
+        };
 
 /*         default_layer { */
 /* // -------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
