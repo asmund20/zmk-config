@@ -78,7 +78,7 @@
         };
 
         nav_layer {
-            bindings = <none
+            bindings = <
 &none   &none     &kp LG(W) &none      &none          &kp LG(T)          &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &none     &trans
 &trans  &kp LG(1) &kp LG(2) &kp LG(3)  &kp LG(4)      &kp LG(5)          &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &none     &trans
 &trans  &kp LG(6) &kp LG(7) &kp LG(8)  &kp LG(9)      &kp LG(B)          &none     &none      &none      &none      &none     &trans
