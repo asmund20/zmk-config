@@ -12,11 +12,16 @@
 #define NUM 1
 #define BLUETOOTH 2
 #define FUNCTION 3
-#define GAMING 4
+#define NAV 4
+#define MOUSE 5
 
 &kscan0 {
     debounce-press-ms = <4>;
     debounce-release-ms = <4>;
+};
+
+&caps_word {
+    continue-list = <UNDERSCORE MINUS DELETE BACKSPACE>;
 };
 
 / {
@@ -36,70 +41,57 @@
     keymap {
         compatible = "zmk,keymap";
 
-        // Temporary layout that works with my kanata config as I have a dead
-        // thumb cluster on the right half
         default_layer {
             bindings = <
-&kp ESC            &kp Q &kp W &kp E &kp R &kp T       &kp Y &kp U &kp I     &kp O      &kp P     &kp BSPC
-&kp CAPS           &kp A &kp S &kp D &kp F &kp G       &kp H &kp J &kp K     &kp L      &kp SEMI  &kp ENTER
-&lt FUNCTION LSHFT &kp Z &kp X &kp C &kp V &kp B       &kp N &kp M &kp COMMA &kp PERIOD &kp SLASH &kp LGUI
-&lt BLUETOOTH DELETE &kp SPACE &kp T                   &kp T &kp T &kp T
+&kp ESC      &kp Q      &kp W       &kp E       &kp R      &kp T           &kp Y &kp U      &kp I        &kp O        &kp P          &kp BSPC
+&kp TAB      &hm RALT A &hm LSHFT S &hm LCTRL D &hm LALT F &kp G           &kp H &hm LALT J &hm RCTRL K  &hm RSHFT L  &hm RALT SEMI  &kp ENTER
+&caps_word   &kp Z      &kp X       &kp C       &kp V      &kp B           &kp N &kp M      &kp COMMA    &kp PERIOD   &kp SLASH      &kp T
+                    &mo MOUSE  &lt NAV SPACE &lt FUNCTION DELETE           &key_repeat  &mo NUM  &kp LGUI
             >;
         };
 
         num_layer {
-// --------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// |  RALT   |    /    |     @      |     {     |     }    |    Å    |                |  |(bar) |      7       |       8       |       9       |       \      |BACKSPACE|
-// |  LSHIFT |    =    |     <      |     (     |     )    |    Ø    |                |    '    |    LALT/4    |    RCtrl/5    |    RShft/6    |    RALT/+    |  ENTER  |
-// |  NONE   |    "    |     $      |     [     |     ]    |    Æ    |                |    0    |      1       |       2       |       3       |       -      |  NONE   |
-//                                              |     &    |  SPACE  |  DEL  |        | tog num |   LGUI  |
             bindings = <
-&kp RALT   &kp LS(N7)  &kp RA(N2)  &kp RA(N7)  &kp RA(N0)  &kp LBKT                          &kp GRAVE  &kp N7        &kp N8         &kp N9         &kp EQUAL        &trans
-&kp LSHFT  &kp LS(N0)  &kp NUBS    &kp LS(N8)  &kp LS(N9)  &kp SEMI                          &kp BSLH   &hm LALT N4   &hm RCTRL N5   &hm RSHFT N6   &hm RALT MINUS   &kp ENTER
-&none      &kp LS(N2)  &kp RA(N4)  &kp RA(N8)  &kp RA(N9)  &kp SQT                           &kp N0     &kp N1        &kp N2         &kp N3         &trans           &none
-                                               &kp LS(N6)  &trans       &trans     &trans    &trans     &trans
+&kp RALT   &kp LS(N7)       &kp RA(N2)        &kp RA(N7)        &kp RA(N0)       &kp LBKT             &kp GRAVE  &kp N7        &kp N8         &kp N9         &kp EQUAL        &trans
+&kp LSHFT  &hm RALT LS(N0)  &hm LSFHT NUBS    &hm LCTRL LS(N8)  &hm LALT LS(N9)  &kp SEMI             &kp BSLH   &hm LALT N4   &hm RCTRL N5   &hm RSHFT N6   &hm RALT MINUS   &trans
+&none      &kp LS(N2)       &kp RA(N4)        &kp RA(N8)        &kp RA(N9)       &kp SQT              &kp N0     &kp N1        &kp N2         &kp N3         &trans           &trans
+                                                            &trans  &trans       &trans               &trans    &trans     &trans
             >;
         };
 
         bt_layer {
-// --------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// |  NONE  |  NONE  |  LSHIFT |  CTRL  |    LAlt    |  NONE  |                 |  NONE  |  NONE  |  vol up  |  NONE  |  NONE  |  NONE  |
-// |  NONE  |  bt 0  |   bt 1  |  bt 2  |    bt 3    |  bt 4  |                 |  NONE  |  NONE  |  vol dn  |  NONE  |  NONE  |  NONE  |
-// |  NONE  |  NONE  | out usb | out bt |  bt clear  |  NONE  |                 |  NONE  |  NONE  |  NONE    |  NONE  |  NONE  |  NONE  |
-//                                      |    NONE    |  NONE  |  NONE  |        |  NONE  |  NONE  |
             bindings = <
-&none  &none         &none         &none         &none         &none                            &none    &kp C_BRI_UP  &kp C_VOL_UP    &none    &none  &none
-&none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                     &none    &kp C_BRI_DN  &kp C_VOL_DN    &none    &none  &none
-&none  &none         &out OUT_USB  &out OUT_BLE  &bt BT_CLR    &none                            &none    &none         &kp C_MUTE      &none    &none
-                                                 &none         &none        &trans     &none    &none    &none
+&none  &none         &none         &none         &none         &none                   &none    &kp C_BRI_UP  &kp C_VOL_UP    &none    &none  &none
+&none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4            &none    &kp C_BRI_DN  &kp C_VOL_DN    &none    &none  &none
+&none  &none         &out OUT_USB  &out OUT_BLE  &bt BT_CLR    &none                   &none    &none         &kp C_MUTE      &none    &none
+                                    &none         &none        &none                   &none    &none    &none
             >;
         };
 
         fn_layer {
-// --------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// |   F1   |   F2   |   F3   |   F4   |   F5   |   F6   |                      |   INS  |  pgup  |   up   |  pgdn  |  NONE  |  NONE  |
-// |   F7   |   F8   |   F9   |   F10  |   F11  |   F12  |                      |  HOME  |  left  |  down  |  right |  lalt  |  ENTER |
-// |  NONE  |  LALT  |  LSHIFT|  CTRL  |  LALT  |  NONE  |                      |   END  |  NONE  |  NONE  |  NONE  |  NONE  |  NONE  |
-//                                     |  NONE  |  NONE  |  NONE  |  to GAMING  |  NONE  |  LGUI  |
             bindings = <
-&kp F1  &kp F2    &kp F3     &kp F4     &kp F5    &kp F6                        &kp INS   &kp PG_UP  &kp UP    &kp PG_DN  &none     &none
-&kp F7  &kp F8    &kp F9     &kp F10    &kp F11   &kp F12                       &kp HOME  &kp LEFT   &kp DOWN  &kp RIGHT  &kp LALT  &kp ENTER
-&none   &kp LALT  &kp LSHFT  &kp LCTRL  &kp LALT  &none                         &kp END   &none      &none     &none      &none     &none
-                                        &trans    &none  &none    &to GAMING    &none     &trans
+&kp F1  &kp F2    &kp F3     &kp F4     &kp F5    &kp F6          &none    &none  &none    &none    &none  &none
+&kp F7  &kp F8    &kp F9     &kp F10    &kp F11   &kp F12         &none    &none  &none    &none    &none  &none
+&none   &none     &none      &none      &none     &none           &none    &none  &none    &none    &none
+                                 &trans    &none  &none           &none    &none    &none
             >;
         };
 
-        gaming_layer {
-// --------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// |   ESC   |    Q    |     W      |     E     |     R    |     T    |              
-// |   TAB   | RALT/A  |  LShift/S  |  LCtrl/D  |  LAlt/F  |     G    |              
-// |  NONE   |    Z    |     X      |     C     |     V    |     B    |              
-//                                | FUNCTION/CAPS |  bluetooth/space  | delete |  to default  
+        nav_layer {
+            bindings = <none
+&none   &none     &kp LG(W) &none      &none          &kp LG(T)          &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &none     &trans
+&trans  &kp LG(1) &kp LG(2) &kp LG(3)  &kp LG(4)      &kp LG(5)          &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &none     &trans
+&trans  &kp LG(6) &kp LG(7) &kp LG(8)  &kp LG(9)      &kp LG(B)          &none     &none      &none      &none      &none     &trans
+                                       &trans    &trans  &trans          &trans    &trans     &trans
+            >;
+        };
+        
+        mouse_layer {
             bindings = <
-&kp ESC    &kp Q      &kp W    &kp E   &kp R    &kp T                                   &kp Y     &kp U       &kp I        &kp O        &kp P          &kp BSPC
-&kp LSHFT  &kp A      &kp S    &kp D   &kp F    &kp G                                   &kp H     &hm LALT J  &hm RCTRL K  &hm RSHFT L  &hm RALT RBKT  &kp ENTER
-&none      &kp Z      &kp X    &kp C   &kp V    &kp B                                   &kp N     &kp M       &kp COMMA    &kp PERIOD   &kp SLASH      &none
-                                       &kp F3   &kp SPACE  &kp DELETE     &to DEFAULT   &kp T    &to DEFAULT
+&none    &none  &none    &none    &none  &none        &none    &none  &none    &none    &none  &none
+&none    &none  &none    &none    &none  &none        &none    &none  &none    &none    &none  &none
+         &none  &none    &none    &none  &none        &none    &none  &none    &none    &none
+                         &none    &none  &none        &none    &none  &none
             >;
         };
     };
