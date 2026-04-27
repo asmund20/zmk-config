@@ -52,7 +52,7 @@
 
         num_layer {
             bindings = <
-&tran   &kp LS(N7)       &kp RA(N2)        &kp RA(N7)        &kp RA(N0)       &kp LBKT             &kp GRAVE  &kp N7        &kp N8         &kp N9         &kp EQUAL        &trans
+&trans  &kp LS(N7)       &kp RA(N2)        &kp RA(N7)        &kp RA(N0)       &kp LBKT             &kp GRAVE  &kp N7        &kp N8         &kp N9         &kp EQUAL        &trans
 &trans  &hm RALT LS(N0)  &hm LSFHT NUBS    &hm LCTRL LS(N8)  &hm LALT LS(N9)  &kp SEMI             &kp BSLH   &hm LALT N4   &hm RCTRL N5   &hm RSHFT N6   &hm RALT MINUS   &trans
 &none   &kp LS(N2)       &kp RA(N4)        &kp RA(N8)        &kp RA(N9)       &kp SQT              &kp N0     &kp N1        &kp N2         &kp N3         &trans           &trans
                                                          &trans  &trans       &trans               &trans    &trans     &trans
