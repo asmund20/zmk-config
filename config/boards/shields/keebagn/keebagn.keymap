@@ -109,10 +109,10 @@
         
         mouse_layer {
             bindings = <
-&none  &none     &none      &none      &none     &none        &none           &none           &none         &none            &none  &none
-&none  &none     &none      &none      &none     &none        &none           &none           &none         &none            &none  &none
-&none  &none     &none      &none      &none     &none        &none           &none           &none         &none            &none  &none
-                                   &none  &none  &none        &kp T  &kp T  &kp T
+&kp T  &kp T     &kp T      &kp T      &kp T     &kp T        &kp T           &kp T           &kp T         &kp T            &kp T  &kp T
+&kp T  &kp T     &kp T      &kp T      &kp T     &kp T        &kp T           &kp T           &kp T         &kp T            &kp T  &kp T
+&kp T  &kp T     &kp T      &kp T      &kp T     &kp T        &kp T           &kp T           &kp T         &kp T            &kp T  &kp T
+                                   &kp T  &kp T  &kp T        &kp T  &kp T  &kp T
             >;
 /*             bindings = < */
 /* &none  &none     &none      &none      &none     &none        &none           &mkp MB1        &mkp MB3      &mkp MB2         &none  &none */
