@@ -16,6 +16,7 @@
 #define NAV 4
 #define MOUSE 5
 #define GAMING 6
+#define GAMING_TYPING 7
 
 &kscan0 {
     debounce-press-ms = <4>;
@@ -38,6 +39,19 @@
             bindings = <&kp>, <&kp>;
         };
 
+    };
+
+    macros {
+        enter_then_type: enter_then_type {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap ENTER>, <&to GAMING_TYPING>;
+        };
+        enter_then_game: enter_then_game {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap ENTER>, <&to GAMING>;
+        };
     };
 
     keymap {
@@ -100,9 +114,17 @@
         gaming_layer {
             bindings = <
 &kp ESC    &kp Q      &kp W    &kp E   &kp R    &kp T            &kp Y     &kp U       &kp I        &kp O        &kp P          &kp BSPC
-&kp TAB    &kp A      &kp S    &kp D   &kp F    &kp G            &kp H     &hm LALT J  &hm RCTRL K  &hm RSHFT L  &hm RALT RBKT  &kp ENTER
+&kp TAB    &kp A      &kp S    &kp D   &kp F    &kp G            &kp H     &hm LALT J  &hm RCTRL K  &hm RSHFT L  &hm RALT RBKT  &enter_then_type
 &kp LSHFT  &kp Z      &kp X    &kp C   &kp V    &kp B            &kp N     &kp M       &kp COMMA    &kp PERIOD   &kp SLASH      &none
                             &kp F3   &kp SPACE  &kp DELETE       &to DEFAULT   &to DEFAULT &to DEFAULT
+            >;
+        };
+        gaming_typing {
+            bindings = <
+&kp ESC      &kp Q      &kp W       &kp E       &kp R      &kp T           &kp Y &kp U      &kp I        &kp O        &kp P          &kp BSPC
+&kp TAB      &hm RALT A &hm LSHFT S &hm LCTRL D &hm LALT F &kp G           &kp H &hm LALT J &hm RCTRL K  &hm RSHFT L  &hm RALT RBKT  &enter_then_game
+&caps_word   &kp Z      &kp X       &kp C       &kp V      &kp B           &kp N &kp M      &kp COMMA    &kp PERIOD   &kp SLASH      &mo BLUETOOTH
+                    &none      &lt NAV SPACE &lt FUNCTION DELETE           &key_repeat  &mo NUM  &kp LGUI
             >;
         };
     };
