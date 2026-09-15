@@ -109,7 +109,7 @@
         
         mouse_layer {
             bindings = <
-&kp T  &kp T     &kp T      &kp T      &kp T     &kp T        &kp T           &kp T           &kp T         &kp T            &kp T  &kp T
+&kp T  &kp T     &kp T      &kp T      &kp T     &kp T        &kp T           &mkp MB1        &mkp MB3      &mkp MB2         &kp T  &kp T
 &kp T  &kp T     &kp T      &kp T      &kp T     &kp T        &kp T           &kp T           &kp T         &kp T            &kp T  &kp T
 &kp T  &kp T     &kp T      &kp T      &kp T     &kp T        &kp T           &kp T           &kp T         &kp T            &kp T  &kp T
                                    &kp T  &kp T  &kp T        &kp T  &kp T  &kp T
