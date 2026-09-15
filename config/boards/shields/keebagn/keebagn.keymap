@@ -40,12 +40,22 @@
         };
 
     };
-
+    /* macros { */
+    /*     zed_em_kay: zed_em_kay { */
+    /*         compatible = "zmk,behavior-macro"; */
+    /*         #binding-cells = <0>; */
+    /*         bindings */
+    /*             = <&macro_press &kp LSHFT> */
+    /*             , <&macro_tap &kp Z &kp M &kp K> */
+    /*             , <&macro_release &kp LSHFT> */
+    /*             ; */
+    /*     }; */
+    /* }; */
     macros {
         enter_then_type: enter_then_type {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap ENTER>, <&to GAMING_TYPING>;
+            bindings = <&macro_tap &kp ENTER>, <&to GAMING_TYPING>;
         };
         enter_then_game: enter_then_game {
             compatible = "zmk,behavior-macro";
