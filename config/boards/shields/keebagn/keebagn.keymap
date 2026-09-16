@@ -39,16 +39,6 @@
             bindings = <&kp>, <&kp>;
         };
 
-        lth: layer-tap-hold {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LAYER_HOLD_TAP";
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick-tap-ms = <0>;
-            flavor = "tap-preferred";
-            bindings = <&sl>, <&mo>;
-        }
-
     };
     macros {
         enter_then_type: enter_then_type {
@@ -77,7 +67,7 @@
 &kp ESC      &kp Q      &kp W       &kp E       &kp R      &kp T           &kp Y &kp U      &kp I        &kp O        &kp P          &kp BSPC
 &kp TAB      &hm RALT A &hm LSHFT S &hm LCTRL D &hm LALT F &kp G           &kp H &hm LALT J &hm RCTRL K  &hm RSHFT L  &hm RALT RBKT  &kp ENTER
 &caps_word   &kp Z      &kp X       &kp C       &kp V      &kp B           &kp N &kp M      &kp COMMA    &kp PERIOD   &kp SLASH      &mo BLUETOOTH
-                    &mo MOUSE  &lt NAV SPACE &lt FUNCTION DELETE           &key_repeat  &lth NUM NUM  &kp LGUI
+                    &mo MOUSE  &lt NAV SPACE &lt FUNCTION DELETE           &key_repeat  &mo NUM  &kp LGUI
             >;
         };
 
@@ -139,7 +129,7 @@
 &kp ESC      &kp Q      &kp W       &kp E       &kp R      &kp T           &kp Y &kp U      &kp I        &kp O        &kp P          &kp BSPC
 &kp TAB      &hm RALT A &hm LSHFT S &hm LCTRL D &hm LALT F &kp G           &kp H &hm LALT J &hm RCTRL K  &hm RSHFT L  &hm RALT RBKT  &enter_then_game
 &caps_word   &kp Z      &kp X       &kp C       &kp V      &kp B           &kp N &kp M      &kp COMMA    &kp PERIOD   &kp SLASH      &mo BLUETOOTH
-                    &none      &lt NAV SPACE &lt FUNCTION DELETE           &key_repeat  &lth NUM NUM  &kp LGUI
+                    &none      &lt NAV SPACE &lt FUNCTION DELETE           &key_repeat  &mo NUM  &kp LGUI
             >;
         };
     };
