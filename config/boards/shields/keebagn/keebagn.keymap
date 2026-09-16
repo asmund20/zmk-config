@@ -47,7 +47,7 @@
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
             bindings = <&sl>, <&mo>;
-        };
+        }
 
     };
     macros {
