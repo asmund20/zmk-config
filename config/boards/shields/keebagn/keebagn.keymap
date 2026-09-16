@@ -24,7 +24,7 @@
 };
 
 &caps_word {
-    continue-list = <UNDERSCORE MINUS DELETE BACKSPACE LSHFT RSHFT>;
+    continue-list = <SLASH DELETE BACKSPACE LSHFT RSHFT>;
 };
 
 / {
