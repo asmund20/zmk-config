@@ -110,17 +110,11 @@
 
         workspace_layer {
             bindings = <
-&none &kp LG(N6) &none &none &none &none     &none &none &none &none &none &none
-&none &none      &none &none &none &none     &none &none &none &none &none &none
-&none &none      &none &none &none &none     &none &none &none &none &none &none
-                       &none &none &none     &none &none &none
+&none &kp LG(N6) &kp LG(N7) &kp LG(N8) &kp LG(N9) &kp LG(N0)       &none &none     &none     &none      &none    &none
+&none &kp LG(N1) &kp LG(N2) &kp LG(N3) &kp LG(N4) &kp LG(N5)       &none &kp LALT  &kp RCTRL &kp RSHFT  &kp RALT &none
+&none &none      &none      &none      &none      &none            &none &none     &none     &none      &none    &none
+                                      &none &none &none            &none &none &none
             >;
-/*             bindings = < */
-/* &none  &kp LG(N6)  &kp LG(N7)  &kp LG(N8)  &kp LG(N9)  &kp LG(N10)      &none  &none     &none      &none      &none     &none */
-/* &none  &kp LG(N1)  &kp LG(N2)  &kp LG(N3)  &kp LG(N4)  &kp LG(N5)       &none  &kp LALT  &kp RCTRL  &kp RSHFT  &kp RALT  &none */
-/* &none  &none       &none       &none       &none       &none            &none  &none     &none      &none      &none     &none */
-/*                                        &none    &none  &none            &none  &none     &none */
-/*             >; */
         };
         
         mouse_layer {
