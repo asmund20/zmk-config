@@ -58,11 +58,6 @@
                 , <&macro_tap &to GAMING>
                 ;
         };
-        lgtd: lg_then_default {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&macro_param_1to1>, <&kp LG(MACRO_PLACEHOLDER)>, &to DEFAULT;
-        };
     };
 
     keymap {
